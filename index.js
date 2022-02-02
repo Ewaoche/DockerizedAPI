@@ -4,6 +4,7 @@ const errorHandler = require('./middleware/error');
 const session = require('express-session');
 const redis = require('redis');
 let RedisStore = require("connect-redis")(session)
+const cors = require("cors");
 
 
 const { 
@@ -66,8 +67,12 @@ app.use(session({
 app.use(express.json());
 const port = process.env.PORT || 3000
 app.enable("trust proxy");
-app.get('/', (req, res)=> {
+
+app.use(cors());
+
+app.get('/api/v1', (req, res)=> {
     res.send("<h2>Hello welcome codeman</h2>")
+    console.log("code ran here");
 })
 
 app.use('/api/v1/auth', userRoute);
