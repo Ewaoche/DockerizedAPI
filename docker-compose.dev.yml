@@ -17,9 +17,9 @@ services:
       - MONGO_PASSWORD=ewaoche12345 
       - SESSION_SECRET=secret
     command: npm run dev
-  
   mongo:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=ewaoche
       - MONGO_INITDB_ROOT_PASSWORD=ewaoche12345
 
+  
