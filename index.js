@@ -71,7 +71,7 @@ app.enable("trust proxy");
 app.use(cors());
 
 app.get('/api/v1', (req, res)=> {
-    res.send("<h2>Hello welcome codeman</h2>")
+    res.send("<h2>Hello welcome codeman !!</h2>")
     console.log("code ran here");
 })
 
